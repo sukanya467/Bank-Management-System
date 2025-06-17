@@ -2,7 +2,7 @@
 # Bank Management System – C++ Project
 
 This is a simple **console-based Bank Management System** implemented in **C++**. The project uses **Object-Oriented Programming (OOP)** concepts to simulate basic banking operations.
-## 📋 Features
+## Features
 
 - Create a new account  
 -  Deposit money  
