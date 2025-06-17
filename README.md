@@ -1,79 +1,35 @@
-# Bank-Management-System
-#include<iostream>
-using namespace std;
 
-class BankAccount {
-private:
-    string name;
-    int accountNumber;
-    float balance;
+# Bank Management System – C++ Project
 
-public:
-    // Create account
-    void createAccount() {
-        cout << "Enter your name: ";
-        cin >> name;
-        cout << "Enter account number: ";
-        cin >> accountNumber;
-        cout << "Enter initial balance: ";
-        cin >> balance;
-        cout << "Account created successfully!\n\n";
-    }
+This is a simple **console-based Bank Management System** implemented in **C++**. The project uses **Object-Oriented Programming (OOP)** concepts to simulate basic banking operations.
+## 📋 Features
 
-    // Deposit money
-    void deposit() {
-        float amount;
-        cout << "Enter amount to deposit: ";
-        cin >> amount;
-        balance += amount;
-        cout << "Amount deposited successfully!\n\n";
-    }
+- Create a new account  
+-  Deposit money  
+-  Withdraw money  
+-  Display account details  
 
-    // Withdraw money
-    void withdraw() {
-        float amount;
-        cout << "Enter amount to withdraw: ";
-        cin >> amount;
-        if(amount <= balance) {
-            balance -= amount;
-            cout << "Amount withdrawn successfully!\n\n";
-        } else {
-            cout << "Insufficient balance!\n\n";
-        }
-    }
+##  Technologies Used
 
-    // Display details
-    void display() {
-        cout << "\n--- Account Details ---\n";
-        cout << "Name: " << name << endl;
-        cout << "Account Number: " << accountNumber << endl;
-        cout << "Balance: ₹" << balance << endl << endl;
-    }
-};
+- **Language:** C++
+- **Concepts:** Classes, Objects, Switch-Case, Constructors
+- **Compiler:** g++ / Code::Blocks / Turbo C++ / VS Code
 
-int main() {
-    BankAccount account;
-    int choice;
+##  Concepts Demonstrated
 
-    while(true) {
-        cout << "====== Bank Menu ======\n";
-        cout << "1. Create Account\n";
-        cout << "2. Deposit\n";
-        cout << "3. Withdraw\n";
-        cout << "4. Display Details\n";
-        cout << "5. Exit\n";
-        cout << "Enter your choice: ";
-        cin >> choice;
+- Object-Oriented Programming  
+- Class and object design  
+- Encapsulation of banking logic  
+- Menu-driven user interface  
+- Input validation and basic error handling  
 
-        switch(choice) {
-            case 1: account.createAccount(); break;
-            case 2: account.deposit(); break;
-            case 3: account.withdraw(); break;
-            case 4: account.display(); break;
-            case 5: cout << "Thank you for using the Bank System.\n"; return 0;
-            default: cout << "Invalid choice!\n";
-        }
-    }
+---
 
-    return 0;
-}
+## How to Run
+
+1. Clone or download the repository
+2. Open the `.cpp` file in any C++ IDE or text editor
+3. Compile using:
+   ```bash
+   g++ bank.cpp -o bank
+   ./bank
